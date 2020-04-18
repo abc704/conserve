@@ -1,0 +1,386 @@
+.navbar {
+  background-color: rgb(255, 204, 255);
+        margin-top: 0vh;
+}
+//Text Styles 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+$font-sans: 'Open Sans', sans-serif;
+
+//Colors
+$black: #34435E;
+
+
+body {
+  font-family: $font-sans;
+  margin: 0;
+  padding: 0 4em;
+}
+
+main {
+  min-width: 300px;
+  max-width: 500px;
+  margin: auto;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+  color: rgb(255, 204, 255)k;
+  
+  //numbers
+  &:before {
+    content: counter(section);
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px;
+    height: 1.25em;
+    width: 1.25em;
+    background-color: rgb(255, 204, 255);
+    text-align: center;
+    line-height: 1.25em;
+    color: transparent;
+    font-size: 1em;
+  }
+}
+//odd number borders
+p:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+  
+  &:before {
+    left: 100%; 
+    margin-left: -20px;
+  }
+}
+//even number borders
+p:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+  
+  &:before {
+    right: 100%; 
+    margin-right: -20px;
+  }
+}
+//handle first and last
+p:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+p:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	background: rgb(255, 204, 255);
+	background-image: url("b");
+	overflow: hidden;
+}
+/** code by webdevtrick ( https://webdevtrick.com ) **/
+@font-face {
+  font-family: 'neontubes';
+  src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot");
+  src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix") format("embedded-opentype"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2") format("woff2"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff") format("woff"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;//
+  
+}
+
+.main {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 20vw;
+  height: auto;
+  font-family: "neontubes";
+  font-size: 4vw;
+  text-align: center;
+  white-space: nowrap;
+}
+.main span {
+  display: block;
+  position: relative;
+  -webkit-transform: translateZ(0) translate3D(0, 0, 0);
+          transform: translateZ(0) translate3D(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  will-change: opacity;
+}
+.main .webdev {
+  color: #ffd9e2;
+  text-shadow: 0 0 0 transparent, 0 0 10px #ff003c, 0 0 20px rgba(255, 0, 60, 0.5), 0 0 40px #ff003c, 0 0 100px #ff003c, 0 0 200px #ff003c, 0 0 300px #ff003c, 0 0 500px #ff003c, 0 0 1000px #ff003c;
+  -webkit-animation: blink 4s infinite alternate;
+          animation: blink 4s infinite alternate;
+}
+.main .socod {
+  font-size: 4vw;
+  color: #d4eaff;
+  text-shadow: 0 0 0 transparent, 0 0 10px #2695ff, 0 0 20px rgba(38, 149, 255, 0.5), 0 0 40px #2695ff, 0 0 100px #2695ff, 0 0 200px #2695ff, 0 0 300px #2695ff, 0 0 500px #2695ff;
+  -webkit-animation: buzz 0.01s infinite alternate;
+          animation: buzz 0.01s infinite alternate;
+}
+body {
+  background: rgb(255, 204, 255));
+}
+
+
+@keyframes text-flicker {
+  2% { 
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  3% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  6% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  9% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  11% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  14% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  18% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  32% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  33% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  37% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  39% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  43% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  46% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  47% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  100% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+}
+
+@keyframes letter-flicker {
+    2% { 
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  3% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  6% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  9% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  11% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  14% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  18% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  32% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  33% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  37% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  39% {
+    color: rgba(120, 0, 50, .5);
+    text-shadow: none;
+  }
+  40% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  100% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+}
+
+@keyframes border-flicker {
+  2% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230), 
+    0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  3% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  5% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230), 
+    0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  6% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  7% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230), 
+    0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  9% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  13% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230), 
+    0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  16% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  18% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230), 
+    0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  22% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  34% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230), 
+    0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  36% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  54% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230), 
+    0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  100% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230), 
+    0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+}
+
+@-webkit-keyframes buzz {
+  70% {
+    opacity: 0.80;
+  }
+}
+
+@keyframes buzz {
+  70% {
+    opacity: 0.80;
+  }
+}
+@-webkit-keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .main {
+    width: 400px;
+    font-size: 100px;
+  }
+
+  .main .socod {
+    font-size: 35px;
+  }
+}
